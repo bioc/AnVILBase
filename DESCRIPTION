@@ -1,0 +1,25 @@
+Package: AnVILBase
+Title: Generic functions for interacting with the AnVIL ecosystem
+Version: 0.99.0
+Authors@R: c(
+  person("Marcel", "Ramos", , "marcel.ramos@roswellpark.org",
+    c("aut", "cre"), c(ORCID = "0000-0002-3242-0582")),
+  person("Martin", "Morgan", , , c("aut", "ctb"),
+    c(ORCID = "0000-0002-5874-8148"))
+  )
+Description: Provides generic functions for interacting with the AnVIL
+  ecosystem. Packages that use either GCP or Azure in AnVIL are built on top
+  of AnVILBase. Extension packages will provide methods for interacting with
+  other cloud providers.
+License: Artistic-2.0
+Imports:
+  httr,
+  methods
+Suggests:
+  BiocStyle,
+  knitr,
+  rmarkdown,
+  tinytest
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
