@@ -19,11 +19,34 @@
 
 #' @title Cloud Platform Identifier
 #'
-#' @description This function returns the cloud platform identifier.
+#' @description This function calls the appropriate class constructor based on
+#'   environment variables or options within the workspace. This function is
+#'   useful for methods dispatch.
 #'
-#' @return A character string with the cloud platform identifier, either
-#'   "azure" or "gcp".
+#' @details
+#' When `GOOGLE_PROJECT` is set, the function returns an object of class
+#'  `gcp`. When `WORKSPACE_ID` is set, the function returns an object of
+#'  class `azure`. Otherwise, the function returns an error.
+#'
+#' @return An instance of class `gcp` or `azure` depending on the environment
+#'   variables or options set within the Terra workspace.
+#'
 #' @export
 cloud_platform <- function() {
-    .get_platform()
+    switch(
+        .get_platform(),
+        AnVILGCP = {
+            if (!requireNamespace("AnVILGCP", quietly = TRUE))
+                AnVILGCP::gcp()
+            else
+                stop("The AnVILGCP package is not installed.")
+        },
+        AnVILAz = {
+            if (!requireNamespace("AnVILAz", quietly = TRUE))
+                AnVILAz::azure()
+            else
+                stop("The AnVILAz package is not installed.")
+        },
+        stop("The runtime environment must be within an AnVIL workspace.")
+    )
 }

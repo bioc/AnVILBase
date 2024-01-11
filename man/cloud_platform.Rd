@@ -7,9 +7,16 @@
 cloud_platform()
 }
 \value{
-A character string with the cloud platform identifier, either
-"azure" or "gcp".
+An instance of class \code{gcp} or \code{azure} depending on the environment
+variables or options set within the Terra workspace.
 }
 \description{
-This function returns the cloud platform identifier.
+This function calls the appropriate class constructor based on
+environment variables or options within the workspace. This function is
+useful for methods dispatch.
+}
+\details{
+When \code{GOOGLE_PROJECT} is set, the function returns an object of class
+\code{gcp}. When \code{WORKSPACE_ID} is set, the function returns an object of
+class \code{azure}. Otherwise, the function returns an error.
 }

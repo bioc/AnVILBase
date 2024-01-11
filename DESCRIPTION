@@ -17,6 +17,8 @@ Imports:
   httr,
   methods
 Suggests:
+  AnVILAz,
+  ANVILGCP,
   BiocStyle,
   knitr,
   rmarkdown,

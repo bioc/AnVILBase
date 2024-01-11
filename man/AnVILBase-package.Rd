@@ -17,4 +17,9 @@ Authors:
   \item Martin Morgan (\href{https://orcid.org/0000-0002-5874-8148}{ORCID}) [contributor]
 }
 
+Other contributors:
+\itemize{
+  \item NIH NHGRI U24HG004059 [funder]
+}
+
 }
