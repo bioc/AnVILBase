@@ -46,7 +46,6 @@ cloud_platform <- function() {
                 AnVILAz::azure()
             else
                 stop("The AnVILAz package is not installed.")
-        },
-        stop("The runtime environment must be within an AnVIL workspace.")
+        }
     )
 }
