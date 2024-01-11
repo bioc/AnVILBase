@@ -36,13 +36,13 @@ cloud_platform <- function() {
     switch(
         .get_platform(),
         AnVILGCP = {
-            if (!requireNamespace("AnVILGCP", quietly = TRUE))
+            if (requireNamespace("AnVILGCP", quietly = TRUE))
                 AnVILGCP::gcp()
             else
                 stop("The AnVILGCP package is not installed.")
         },
         AnVILAz = {
-            if (!requireNamespace("AnVILAz", quietly = TRUE))
+            if (requireNamespace("AnVILAz", quietly = TRUE))
                 AnVILAz::azure()
             else
                 stop("The AnVILAz package is not installed.")
