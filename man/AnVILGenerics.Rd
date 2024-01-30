@@ -23,6 +23,8 @@ avrestore(..., platform)
 avstorage(..., platform)
 }
 \arguments{
+\item{...}{Arguments passed to the methods.}
+
 \item{platform}{A Platform derived object.}
 }
 \description{

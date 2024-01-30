@@ -8,6 +8,8 @@
 #'
 #' @param platform A Platform derived object.
 #'
+#' @param ... Arguments passed to the methods.
+#'
 #' @export
 setGeneric(
     "avcopy",
