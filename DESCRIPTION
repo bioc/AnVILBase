@@ -18,11 +18,11 @@ Imports:
   methods
 Suggests:
   AnVILAz,
-  ANVILGCP,
+  AnVILGCP,
   BiocStyle,
   knitr,
   rmarkdown,
   tinytest
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
