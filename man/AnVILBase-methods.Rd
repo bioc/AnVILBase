@@ -14,6 +14,8 @@
 \alias{avrestore,ANY-method}
 \alias{avstorage,missing-method}
 \alias{avstorage,ANY-method}
+\alias{avworkspaces,missing-method}
+\alias{avworkspaces,ANY-method}
 \title{The AnVILBase methods for 'missing' and 'ANY' signatures}
 \usage{
 \S4method{avcopy}{missing}(..., platform)
@@ -39,6 +41,10 @@
 \S4method{avstorage}{missing}(..., platform)
 
 \S4method{avstorage}{ANY}(..., platform)
+
+\S4method{avworkspaces}{missing}(..., platform)
+
+\S4method{avworkspaces}{ANY}(..., platform)
 }
 \arguments{
 \item{...}{Arguments passed to the method}
@@ -74,5 +80,9 @@ package. These methods are defined for the 'missing' and 'ANY' signatures.
 \item \code{avstorage(missing)}: Get the storage location
 
 \item \code{avstorage(ANY)}: Get the storage location
+
+\item \code{avworkspaces(missing)}: List workspaces
+
+\item \code{avworkspaces(ANY)}: List workspaces
 
 }}
