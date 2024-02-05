@@ -82,3 +82,15 @@ setMethod("avstorage", c(platform = "missing"), function(..., platform) {
 setMethod("avstorage", c(platform = "ANY"), function(..., platform) {
     stop("'avstorage()' not implemented for class ", class(platform))
 })
+
+#' @describeIn AnVILBase-methods List workspaces
+#' @exportMethod avworkspaces
+setMethod("avworkspaces", c(platform = "missing"), function(..., platform) {
+    avworkspaces(..., platform = cloud_platform())
+})
+
+#' @describeIn AnVILBase-methods List workspaces
+#' @exportMethod avworkspaces
+setMethod("avworkspaces", c(platform = "ANY"), function(..., platform) {
+    stop("'avworkspaces()' not implemented for class ", class(platform))
+})
