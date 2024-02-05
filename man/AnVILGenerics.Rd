@@ -8,6 +8,7 @@
 \alias{avbackup}
 \alias{avrestore}
 \alias{avstorage}
+\alias{avworkspaces}
 \title{All the generics for AnVIL}
 \usage{
 avcopy(..., platform)
@@ -21,6 +22,8 @@ avbackup(..., platform)
 avrestore(..., platform)
 
 avstorage(..., platform)
+
+avworkspaces(..., platform)
 }
 \arguments{
 \item{...}{Arguments passed to the methods.}

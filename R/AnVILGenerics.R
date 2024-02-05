@@ -56,3 +56,11 @@ setGeneric(
     function(..., platform) standardGeneric("avstorage"),
     signature = "platform"
 )
+
+#' @rdname AnVILGenerics
+#' @export
+setGeneric(
+    "avworkspaces",
+    function(..., platform) standardGeneric("avworkspaces"),
+    signature = "platform"
+)
