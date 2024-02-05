@@ -15,6 +15,7 @@ Description: Provides generic functions for interacting with the AnVIL
 License: Artistic-2.0
 Imports:
   httr,
+  dplyr,
   jsonlite,
   methods,
   tibble

@@ -1,13 +1,17 @@
-#' Check HTTP status code and raise error when appropriate
+#' @name avbase-utilities
 #'
-#' @description This function checks the HTTP status code and raises an error
-#'  when the status code is less than 400.
+#' @title Helper functions for working in AnVIL
+#'
+#' @description
+#' * `avstop_for_status` - Check HTTP status code and raise error when
+#'   less than 400.
 #'
 #' @param response Response object from httr
 #'
 #' @param op Operation that was attempted
 #'
-#' @return `response` if status code less than 400 otherwise throw an error
+#' @return `avstop_for_status` - `response` if status code less than 400
+#'   otherwise throw an error
 #'
 #' @importFrom httr status_code http_condition headers
 avstop_for_status <-
@@ -37,4 +41,32 @@ avstop_for_status <-
         if (!is.null(msg)) "\n  ", msg
     )
     stop(message, call.=FALSE)
+}
+
+#' @rdname avbase-utilities
+#'
+#' @description
+#' * `avworkspaces_clean` - Clean workspace information
+#'
+#' @param .data A tibble with workspace information
+#'
+#' @return `avworkspaces_clean` - A cleaned tibble with workspace information
+#'
+#' @export
+avworkspaces_clean <- function(.data) {
+    .data |>
+        dplyr::select(
+            name = .data$workspace.name,
+            lastModified = .data$workspace.lastModified,
+            createdBy = .data$workspace.createdBy,
+            namespace = .data$workspace.namespace,
+            accessLevel = .data$accessLevel
+        ) |>
+        dplyr::mutate(
+            lastModified = as.Date(.data$lastModified)
+        ) |>
+        dplyr::arrange(
+            .data$name,
+            dplyr::desc(.data$lastModified)
+        )
 }
