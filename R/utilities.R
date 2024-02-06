@@ -10,10 +10,12 @@
 #'
 #' @param op Operation that was attempted
 #'
+#' @importFrom httr status_code http_condition headers
+#'
 #' @return `avstop_for_status` - `response` if status code less than 400
 #'   otherwise throw an error
 #'
-#' @importFrom httr status_code http_condition headers
+#' @export
 avstop_for_status <-
     function(response, op)
 {
