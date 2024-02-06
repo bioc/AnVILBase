@@ -25,8 +25,10 @@ Suggests:
   BiocStyle,
   knitr,
   rmarkdown,
+  testthat (>= 3.0.0),
   tinytest
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Date: 2024-02-05
+Config/testthat/edition: 3
