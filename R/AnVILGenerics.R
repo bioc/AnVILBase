@@ -64,3 +64,11 @@ setGeneric(
     function(..., platform) standardGeneric("avworkspaces"),
     signature = "platform"
 )
+
+#' @rdname AnVILGenerics
+#' @export
+setGeneric(
+    "avtable_import",
+    function(..., platform) standardGeneric("avtable_import"),
+    signature = "platform"
+)

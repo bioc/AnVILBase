@@ -16,6 +16,8 @@
 \alias{avstorage,ANY-method}
 \alias{avworkspaces,missing-method}
 \alias{avworkspaces,ANY-method}
+\alias{avtable_import,missing-method}
+\alias{avtable_import,ANY-method}
 \title{The AnVILBase methods for 'missing' and 'ANY' signatures}
 \usage{
 \S4method{avcopy}{missing}(..., platform)
@@ -45,6 +47,10 @@
 \S4method{avworkspaces}{missing}(..., platform)
 
 \S4method{avworkspaces}{ANY}(..., platform)
+
+\S4method{avtable_import}{missing}(..., platform)
+
+\S4method{avtable_import}{ANY}(..., platform)
 }
 \arguments{
 \item{...}{Arguments passed to the method}
@@ -84,5 +90,9 @@ package. These methods are defined for the 'missing' and 'ANY' signatures.
 \item \code{avworkspaces(missing)}: List workspaces
 
 \item \code{avworkspaces(ANY)}: List workspaces
+
+\item \code{avtable_import(missing)}: Upload a dataset to the DATA tab
+
+\item \code{avtable_import(ANY)}: Upload a dataset to the DATA tab
 
 }}

@@ -94,3 +94,15 @@ setMethod("avworkspaces", c(platform = "missing"), function(..., platform) {
 setMethod("avworkspaces", c(platform = "ANY"), function(..., platform) {
     stop("'avworkspaces()' not implemented for class ", class(platform))
 })
+
+#' @describeIn AnVILBase-methods Upload a dataset to the DATA tab
+#' @exportMethod avtable_import
+setMethod("avtable_import", c(platform = "missing"), function(..., platform) {
+    avtable_import(..., platform = cloud_platform())
+})
+
+#' @describeIn AnVILBase-methods Upload a dataset to the DATA tab
+#' @exportMethod avtable_import
+setMethod("avtable_import", c(platform = "ANY"), function(..., platform) {
+    stop("'avtable_import()' not implemented for class ", class(platform))
+})
