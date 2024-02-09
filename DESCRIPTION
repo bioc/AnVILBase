@@ -32,3 +32,15 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Date: 2024-02-09
 Config/testthat/edition: 3
+Collate: 
+    'AnVILBase-generics.R'
+    'avworkspace-generics.R'
+    'avtable-generics.R'
+    'AnVILBase-methods.R'
+    'AnVILBase-package.R'
+    'Platform-class.R'
+    'Response.R'
+    'avtable-methods.R'
+    'avworkspace-methods.R'
+    'cloud_platform.R'
+    'utilities.R'

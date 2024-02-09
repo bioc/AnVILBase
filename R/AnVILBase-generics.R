@@ -1,4 +1,4 @@
-#' @name AnVILGenerics
+#' @name AnVILBase-generics
 #'
 #' @aliases avcopy avlist avremove avbackup avrestore avstorage
 #'
@@ -17,7 +17,7 @@ setGeneric(
     signature = "platform"
 )
 
-#' @rdname AnVILGenerics
+#' @rdname AnVILBase-generics
 #' @export
 setGeneric(
     "avlist",
@@ -25,7 +25,7 @@ setGeneric(
     signature = "platform"
 )
 
-#' @rdname AnVILGenerics
+#' @rdname AnVILBase-generics
 #' @export
 setGeneric(
     "avremove",
@@ -33,7 +33,7 @@ setGeneric(
     signature = "platform"
 )
 
-#' @rdname AnVILGenerics
+#' @rdname AnVILBase-generics
 #' @export
 setGeneric(
     "avbackup",
@@ -41,7 +41,7 @@ setGeneric(
     signature = "platform"
 )
 
-#' @rdname AnVILGenerics
+#' @rdname AnVILBase-generics
 #' @export
 setGeneric(
     "avrestore",
@@ -49,34 +49,10 @@ setGeneric(
     signature = "platform"
 )
 
-#' @rdname AnVILGenerics
+#' @rdname AnVILBase-generics
 #' @export
 setGeneric(
     "avstorage",
     function(..., platform) standardGeneric("avstorage"),
-    signature = "platform"
-)
-
-#' @rdname AnVILGenerics
-#' @export
-setGeneric(
-    "avworkspaces",
-    function(..., platform) standardGeneric("avworkspaces"),
-    signature = "platform"
-)
-
-#' @rdname AnVILGenerics
-#' @export
-setGeneric(
-    "avtable_import",
-    function(..., platform) standardGeneric("avtable_import"),
-    signature = "platform"
-)
-
-#' @rdname AnVILGenerics
-#' @export
-setGeneric(
-    "avtable_delete_values",
-    function(..., platform) standardGeneric("avtable_delete_values"),
     signature = "platform"
 )

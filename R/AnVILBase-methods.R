@@ -9,6 +9,9 @@
 #'
 #' @param platform An object derived from the Platform class.
 #'
+#' @include avtable-generics.R
+#' @include avworkspace-generics.R
+#'
 NULL
 
 #' @describeIn AnVILBase-methods Copy a file from the cloud
@@ -82,46 +85,3 @@ setMethod("avstorage", c(platform = "missing"), function(..., platform) {
 setMethod("avstorage", c(platform = "ANY"), function(..., platform) {
     stop("'avstorage()' not implemented for class ", class(platform))
 })
-
-#' @describeIn AnVILBase-methods List workspaces
-#' @exportMethod avworkspaces
-setMethod("avworkspaces", c(platform = "missing"), function(..., platform) {
-    avworkspaces(..., platform = cloud_platform())
-})
-
-#' @describeIn AnVILBase-methods List workspaces
-#' @exportMethod avworkspaces
-setMethod("avworkspaces", c(platform = "ANY"), function(..., platform) {
-    stop("'avworkspaces()' not implemented for class ", class(platform))
-})
-
-#' @describeIn AnVILBase-methods Upload a dataset to the DATA tab
-#' @exportMethod avtable_import
-setMethod("avtable_import", c(platform = "missing"), function(..., platform) {
-    avtable_import(..., platform = cloud_platform())
-})
-
-#' @describeIn AnVILBase-methods Upload a dataset to the DATA tab
-#' @exportMethod avtable_import
-setMethod("avtable_import", c(platform = "ANY"), function(..., platform) {
-    stop("'avtable_import()' not implemented for class ", class(platform))
-})
-
-#' @describeIn AnVILBase-methods Delete a row in a table based on the key
-#' @exportMethod avtable_delete_values
-setMethod("avtable_delete_values", c(platform = "missing"),
-    function(..., platform) {
-        avtable_delete_values(..., platform = cloud_platform())
-    }
-)
-
-#' @describeIn AnVILBase-methods Delete a row in a table based on the key
-#' @exportMethod avtable_delete_values
-setMethod("avtable_delete_values", c(platform = "ANY"),
-    function(..., platform) {
-        stop(
-            "'avtable_delete_values()' not implemented for class ",
-            class(platform)
-        )
-    }
-)
