@@ -106,3 +106,22 @@ setMethod("avtable_import", c(platform = "missing"), function(..., platform) {
 setMethod("avtable_import", c(platform = "ANY"), function(..., platform) {
     stop("'avtable_import()' not implemented for class ", class(platform))
 })
+
+#' @describeIn AnVILBase-methods Delete a row in a table based on the key
+#' @exportMethod avtable_delete_values
+setMethod("avtable_delete_values", c(platform = "missing"),
+    function(..., platform) {
+        avtable_delete_values(..., platform = cloud_platform())
+    }
+)
+
+#' @describeIn AnVILBase-methods Delete a row in a table based on the key
+#' @exportMethod avtable_delete_values
+setMethod("avtable_delete_values", c(platform = "ANY"),
+    function(..., platform) {
+        stop(
+            "'avtable_delete_values()' not implemented for class ",
+            class(platform)
+        )
+    }
+)

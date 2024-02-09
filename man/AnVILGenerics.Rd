@@ -10,6 +10,7 @@
 \alias{avstorage}
 \alias{avworkspaces}
 \alias{avtable_import}
+\alias{avtable_delete_values}
 \title{All the generics for AnVIL}
 \usage{
 avcopy(..., platform)
@@ -27,6 +28,8 @@ avstorage(..., platform)
 avworkspaces(..., platform)
 
 avtable_import(..., platform)
+
+avtable_delete_values(..., platform)
 }
 \arguments{
 \item{...}{Arguments passed to the methods.}

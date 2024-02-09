@@ -72,3 +72,11 @@ setGeneric(
     function(..., platform) standardGeneric("avtable_import"),
     signature = "platform"
 )
+
+#' @rdname AnVILGenerics
+#' @export
+setGeneric(
+    "avtable_delete_values",
+    function(..., platform) standardGeneric("avtable_delete_values"),
+    signature = "platform"
+)
