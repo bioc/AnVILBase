@@ -7,6 +7,23 @@
 #'
 NULL
 
+#' @describeIn avtable-methods List entities / types accross or within
+#'   the current workspace respectively.
+#' @exportMethod avtable
+setMethod("avtable", c(platform = "missing"),
+    function(..., platform) {
+        avtable(..., platform = cloud_platform())
+    }
+)
+
+#' @describeIn avtable-methods List entities / types accross or within
+#'   the current workspace respectively.
+#' @exportMethod avtable
+setMethod("avtable", c(platform = "ANY"),
+    function(..., platform) {
+        stop("'avtable()' not implemented for class ", class(platform))
+    }
+)
 #' @describeIn avtable-methods Upload a dataset to the DATA tab
 #' @exportMethod avtable_import
 setMethod("avtable_import", c(platform = "missing"), function(..., platform) {
@@ -17,6 +34,22 @@ setMethod("avtable_import", c(platform = "missing"), function(..., platform) {
 #' @exportMethod avtable_import
 setMethod("avtable_import", c(platform = "ANY"), function(..., platform) {
     stop("'avtable_import()' not implemented for class ", class(platform))
+})
+
+#' @describeIn avtable-methods Creates a grouping table for each
+#'   distinct value in the column identified by `set`.
+#' @exportMethod avtable_import_set
+setMethod("avtable_import_set", c(platform = "missing"), function(..., platform) {
+    avtable_import_set(..., platform = cloud_platform())
+})
+
+#' @describeIn avtable-methods Creates a grouping table for each
+#'   distinct value in the column identified by `set`.
+#' @exportMethod avtable_import_set
+setMethod("avtable_import_set", c(platform = "ANY"), function(..., platform) {
+    stop(
+        "'avtable_import_set()' not implemented for class ", class(platform)
+    )
 })
 
 #' @describeIn avtable-methods Delete a row in a table based on the key
@@ -38,20 +71,3 @@ setMethod("avtable_delete_values", c(platform = "ANY"),
     }
 )
 
-#' @describeIn avtable-methods List entities / types accross or within
-#'   the current workspace respectively.
-#' @exportMethod avtable
-setMethod("avtable", c(platform = "missing"),
-    function(..., platform) {
-        avtable(..., platform = cloud_platform())
-    }
-)
-
-#' @describeIn avtable-methods List entities / types accross or within
-#'   the current workspace respectively.
-#' @exportMethod avtable
-setMethod("avtable", c(platform = "ANY"),
-    function(..., platform) {
-        stop("'avtable()' not implemented for class ", class(platform))
-    }
-)
