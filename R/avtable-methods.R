@@ -30,7 +30,7 @@ setMethod("avtable", c(platform = "ANY"),
 #' @exportMethod avtables
 setMethod("avtables", c(platform = "missing"),
     function(..., platform) {
-        avtable(..., platform = cloud_platform())
+        avtables(..., platform = cloud_platform())
     }
 )
 
