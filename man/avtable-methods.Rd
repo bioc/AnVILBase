@@ -2,15 +2,33 @@
 % Please edit documentation in R/avtable-methods.R
 \name{avtable-methods}
 \alias{avtable-methods}
+\alias{avtable,missing-method}
+\alias{avtable,ANY-method}
+\alias{avtables,missing-method}
+\alias{avtables,ANY-method}
 \alias{avtable_import,missing-method}
 \alias{avtable_import,ANY-method}
+\alias{avtable_import_set,missing-method}
+\alias{avtable_import_set,ANY-method}
 \alias{avtable_delete_values,missing-method}
 \alias{avtable_delete_values,ANY-method}
 \title{The avtable methods for 'missing' and 'ANY' signatures}
 \usage{
+\S4method{avtable}{missing}(..., platform)
+
+\S4method{avtable}{ANY}(..., platform)
+
+\S4method{avtables}{missing}(..., platform)
+
+\S4method{avtables}{ANY}(..., platform)
+
 \S4method{avtable_import}{missing}(..., platform)
 
 \S4method{avtable_import}{ANY}(..., platform)
+
+\S4method{avtable_import_set}{missing}(..., platform)
+
+\S4method{avtable_import_set}{ANY}(..., platform)
 
 \S4method{avtable_delete_values}{missing}(..., platform)
 
@@ -22,9 +40,27 @@ package. These methods are defined for the 'missing' and 'ANY' signatures.
 }
 \section{Functions}{
 \itemize{
+\item \code{avtable(missing)}: Show the contents of a particular table (entity
+/ type) within a workspace.
+
+\item \code{avtable(ANY)}: Show the contents of a particular table (entity
+/ type) within a workspace.
+
+\item \code{avtables(missing)}: List entities / types accross or within
+the current workspace respectively.
+
+\item \code{avtables(ANY)}: List entities / types accross or within
+the current workspace respectively.
+
 \item \code{avtable_import(missing)}: Upload a dataset to the DATA tab
 
 \item \code{avtable_import(ANY)}: Upload a dataset to the DATA tab
+
+\item \code{avtable_import_set(missing)}: Creates a grouping table for each
+distinct value in the column identified by \code{set}.
+
+\item \code{avtable_import_set(ANY)}: Creates a grouping table for each
+distinct value in the column identified by \code{set}.
 
 \item \code{avtable_delete_values(missing)}: Delete a row in a table based on the key
 
