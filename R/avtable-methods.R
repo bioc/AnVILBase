@@ -7,8 +7,8 @@
 #'
 NULL
 
-#' @describeIn avtable-methods List entities / types accross or within
-#'   the current workspace respectively.
+#' @describeIn avtable-methods Show the contents of a particular table (entity
+#'   / type) within a workspace.
 #' @exportMethod avtable
 setMethod("avtable", c(platform = "missing"),
     function(..., platform) {
@@ -16,14 +16,33 @@ setMethod("avtable", c(platform = "missing"),
     }
 )
 
-#' @describeIn avtable-methods List entities / types accross or within
-#'   the current workspace respectively.
+#' @describeIn avtable-methods Show the contents of a particular table (entity
+#'   / type) within a workspace.
 #' @exportMethod avtable
 setMethod("avtable", c(platform = "ANY"),
     function(..., platform) {
         stop("'avtable()' not implemented for class ", class(platform))
     }
 )
+
+#' @describeIn avtable-methods List entities / types accross or within
+#'   the current workspace respectively.
+#' @exportMethod avtables
+setMethod("avtables", c(platform = "missing"),
+    function(..., platform) {
+        avtable(..., platform = cloud_platform())
+    }
+)
+
+#' @describeIn avtable-methods List entities / types accross or within
+#'   the current workspace respectively.
+#' @exportMethod avtables
+setMethod("avtables", c(platform = "ANY"),
+    function(..., platform) {
+        stop("'avtables()' not implemented for class ", class(platform))
+    }
+)
+
 #' @describeIn avtable-methods Upload a dataset to the DATA tab
 #' @exportMethod avtable_import
 setMethod("avtable_import", c(platform = "missing"), function(..., platform) {

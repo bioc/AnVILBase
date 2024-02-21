@@ -22,6 +22,14 @@ setGeneric(
 #' @rdname avtable-generics
 #' @export
 setGeneric(
+    "avtables",
+    function(..., platform) standardGeneric("avtables"),
+    signature = "platform"
+)
+
+#' @rdname avtable-generics
+#' @export
+setGeneric(
     "avtable_import",
     function(..., platform) standardGeneric("avtable_import"),
     signature = "platform"
