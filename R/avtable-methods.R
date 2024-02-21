@@ -37,3 +37,21 @@ setMethod("avtable_delete_values", c(platform = "ANY"),
         )
     }
 )
+
+#' @describeIn avtable-methods List entities / types accross or within
+#'   the current workspace respectively.
+#' @exportMethod avtable
+setMethod("avtable", c(platform = "missing"),
+    function(..., platform) {
+        avtable(..., platform = cloud_platform())
+    }
+)
+
+#' @describeIn avtable-methods List entities / types accross or within
+#'   the current workspace respectively.
+#' @exportMethod avtable
+setMethod("avtable", c(platform = "ANY"),
+    function(..., platform) {
+        stop("'avtable()' not implemented for class ", class(platform))
+    }
+)

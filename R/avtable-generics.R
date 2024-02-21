@@ -26,3 +26,11 @@ setGeneric(
     function(..., platform) standardGeneric("avtable_delete_values"),
     signature = "platform"
 )
+
+#' @rdname avtable-generics
+#' @export
+setGeneric(
+    "avtable",
+    function(..., platform) standardGeneric("avtable"),
+    signature = "platform"
+)
