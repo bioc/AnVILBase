@@ -1,4 +1,5 @@
 setOldClass("response")
+setOldClass("httr2_response")
 
 #' @rdname Response
 #'
@@ -6,9 +7,10 @@ setOldClass("response")
 #'
 #' @aliases flatten,response-method
 #'
-#' @author M. Morgan
+#' @author M. Morgan, M. Ramos
 #'
 #' @importFrom httr content
+#' @importFrom httr2 resp_body_string
 #' @importFrom jsonlite fromJSON
 #' @importFrom tibble as_tibble
 NULL
@@ -39,27 +41,23 @@ NULL
 #' @export
 setGeneric("flatten", function(x) standardGeneric("flatten"))
 
-#' @export
+#' @describeIn Response Reduce httr response object to a two-dimensional table
+#' @exportMethod flatten
 setMethod("flatten", "response",
     function(x)
 {
-    value <- content(x, as="text", encoding = "UTF-8")
-    if (nzchar(value)) {
-        json <- fromJSON(value, flatten = TRUE)
-        as_tibble(json)
-    } else {
-        tibble()
-    }
+    .resp_tibble(x, content, as="text", encoding = "UTF-8")
 })
 
-#' @rdname Response
+#' @describeIn Response Create a compact representation of the list-like JSON
+#'   response
 #'
 #' @param object A `response` object returned by the service.
 #'
 #' @return `str()` displays a compact representation of the list-like
 #'     JSON response; it returns `NULL`.
 #'
-#' @export
+#' @exportMethod str
 setMethod("str", "response",
     function(object)
 {
@@ -78,7 +76,7 @@ setMethod("str", "response",
 #'
 #' @param \dots not currently used
 #'
-#' @return `as.list()` retruns the content of the web service request
+#' @return `as.list()` returns the content of the web service request
 #'     as a list.
 #'
 #' @export
@@ -93,3 +91,21 @@ as.list.response <-
     value
 }
 
+#' @describeIn Response Reduce httr2 request responses to two-dimensional table
+#'   form
+#' @exportMethod flatten
+setMethod("flatten", "httr2_response",
+    function(x)
+{
+    .resp_tibble(x, response_body_string)
+})
+
+.resp_tibble <- function(x, fun, ...) {
+    value <- fun(x, ...)
+    if (nzchar(value)) {
+        json <- fromJSON(value, flatten = TRUE)
+        as_tibble(json)
+    } else {
+        tibble()
+    }
+}

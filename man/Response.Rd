@@ -6,13 +6,18 @@
 \alias{flatten}
 \alias{str,response-method}
 \alias{as.list.response}
+\alias{flatten,httr2_response-method}
 \title{Process service responses to tibble and other data structures.}
 \usage{
 flatten(x)
 
+\S4method{flatten}{response}(x)
+
 \S4method{str}{response}(object)
 
 \method{as.list}{response}(x, ..., as = c("text", "raw", "parsed"))
+
+\S4method{flatten}{httr2_response}(x)
 }
 \arguments{
 \item{x}{A \code{response} object returned by the service.}
@@ -31,12 +36,23 @@ are the unlisted second and more-nested elements.
 \code{str()} displays a compact representation of the list-like
 JSON response; it returns \code{NULL}.
 
-\code{as.list()} retruns the content of the web service request
+\code{as.list()} returns the content of the web service request
 as a list.
 }
 \description{
 Process service responses to tibble and other data structures.
 }
+\section{Functions}{
+\itemize{
+\item \code{flatten(response)}: Reduce httr response object to a two-dimensional table
+
+\item \code{str(response)}: Create a compact representation of the list-like JSON
+response
+
+\item \code{flatten(httr2_response)}: Reduce httr2 request responses to two-dimensional table
+form
+
+}}
 \examples{
 if (AnVILGCP::gcloud_exists()) {
     leonardo <- Leonardo()
@@ -48,5 +64,5 @@ if (AnVILGCP::gcloud_exists()) {
 }
 }
 \author{
-M. Morgan
+M. Morgan, M. Ramos
 }
