@@ -97,7 +97,7 @@ as.list.response <-
 setMethod("flatten", "httr2_response",
     function(x)
 {
-    .resp_tibble(x, response_body_string)
+    .resp_tibble(x, httr2::resp_body_string)
 })
 
 .resp_tibble <- function(x, fun, ...) {
