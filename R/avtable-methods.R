@@ -71,6 +71,18 @@ setMethod("avtable_import_set", c(platform = "ANY"), function(..., platform) {
     )
 })
 
+#' @describeIn avtable-methods Delete a table
+#' @exportMethod avtable_delete
+setMethod("avtable_delete", c(platform = "missing"), function(..., platform) {
+    avtable_delete(..., platform = cloud_platform())
+})
+
+#' @describeIn avtable-methods Delete a table
+#' @exportMethod avtable_delete
+setMethod("avtable_delete", c(platform = "ANY"), function(..., platform) {
+    stop("'avtable_delete()' not implemented for class ", class(platform))
+})
+
 #' @describeIn avtable-methods Delete a row in a table based on the key
 #' @exportMethod avtable_delete_values
 setMethod("avtable_delete_values", c(platform = "missing"),

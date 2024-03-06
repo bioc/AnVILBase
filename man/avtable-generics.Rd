@@ -6,6 +6,7 @@
 \alias{avtable_delete_values}
 \alias{avtables}
 \alias{avtable_import_set}
+\alias{avtable_delete}
 \title{All the table type generics for AnVIL}
 \usage{
 avtable(..., platform)
@@ -15,6 +16,8 @@ avtables(..., platform)
 avtable_import(..., platform)
 
 avtable_import_set(..., platform)
+
+avtable_delete(..., platform)
 
 avtable_delete_values(..., platform)
 }

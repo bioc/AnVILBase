@@ -10,6 +10,8 @@
 \alias{avtable_import,ANY-method}
 \alias{avtable_import_set,missing-method}
 \alias{avtable_import_set,ANY-method}
+\alias{avtable_delete,missing-method}
+\alias{avtable_delete,ANY-method}
 \alias{avtable_delete_values,missing-method}
 \alias{avtable_delete_values,ANY-method}
 \title{The avtable methods for 'missing' and 'ANY' signatures}
@@ -29,6 +31,10 @@
 \S4method{avtable_import_set}{missing}(..., platform)
 
 \S4method{avtable_import_set}{ANY}(..., platform)
+
+\S4method{avtable_delete}{missing}(..., platform)
+
+\S4method{avtable_delete}{ANY}(..., platform)
 
 \S4method{avtable_delete_values}{missing}(..., platform)
 
@@ -61,6 +67,10 @@ distinct value in the column identified by \code{set}.
 
 \item \code{avtable_import_set(ANY)}: Creates a grouping table for each
 distinct value in the column identified by \code{set}.
+
+\item \code{avtable_delete(missing)}: Delete a table
+
+\item \code{avtable_delete(ANY)}: Delete a table
 
 \item \code{avtable_delete_values(missing)}: Delete a row in a table based on the key
 
