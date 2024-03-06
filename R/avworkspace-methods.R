@@ -21,23 +21,30 @@ setMethod("avworkspaces", c(platform = "ANY"), function(..., platform) {
 
 #' @describeIn avworkspace-methods Get the namespace of the current workspace
 #' @exportMethod avworkspace_namespace
-setMethod("avworkspace_namespace", c(platform = "missing"), function(..., platform) {
-    avworkspace_namespace(..., platform = cloud_platform())
-})
+setMethod("avworkspace_namespace", c(platform = "missing"),
+    function(..., platform) {
+        avworkspace_namespace(..., platform = cloud_platform())
+    }
+)
 
 #' @describeIn avworkspace-methods Get the namespace of the current workspace
 #' @exportMethod avworkspace_namespace
-setMethod("avworkspace_namespace", c(platform = "ANY"), function(..., platform) {
-    stop(
-        "'avworkspace_namespace()' not implemented for class ", class(platform)
-    )
-})
+setMethod("avworkspace_namespace", c(platform = "ANY"),
+    function(..., platform) {
+        stop(
+            "'avworkspace_namespace()' not implemented for class ",
+            class(platform)
+        )
+    }
+)
 
 #' @describeIn avworkspace-methods Get the name of the current workspace
 #' @exportMethod avworkspace_name
-setMethod("avworkspace_name", c(platform = "missing"), function(..., platform) {
-    avworkspace_name(..., platform = cloud_platform())
-})
+setMethod("avworkspace_name", c(platform = "missing"),
+    function(..., platform) {
+        avworkspace_name(..., platform = cloud_platform())
+    }
+)
 
 #' @describeIn avworkspace-methods Get the name of the current workspace
 #' @exportMethod avworkspace_name

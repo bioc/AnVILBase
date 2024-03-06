@@ -58,9 +58,11 @@ setMethod("avtable_import", c(platform = "ANY"), function(..., platform) {
 #' @describeIn avtable-methods Creates a grouping table for each
 #'   distinct value in the column identified by `set`.
 #' @exportMethod avtable_import_set
-setMethod("avtable_import_set", c(platform = "missing"), function(..., platform) {
-    avtable_import_set(..., platform = cloud_platform())
-})
+setMethod("avtable_import_set", c(platform = "missing"),
+    function(..., platform) {
+        avtable_import_set(..., platform = cloud_platform())
+    }
+)
 
 #' @describeIn avtable-methods Creates a grouping table for each
 #'   distinct value in the column identified by `set`.
