@@ -1,0 +1,97 @@
+---
+title: "Introduction to AnVILBase"
+author: "Bioconductor AnVIL SIG"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteIndexEntry{Introduction to AnVILBase}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    number_sections: yes
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Installation
+
+```{r, eval=FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("AnVILBase")
+```
+
+```{r,include=TRUE,results="hide",message=FALSE,warning=FALSE}
+library(AnVILBase)
+```
+
+# Introduction
+
+The `AnVILBase` package defines S4 generics for AnVIL packages. The package is
+designed to be used in conjunction with either `AnVILGCP` or `AnVILAz` packages.
+The `AnVILBase` package is not intended to be used as a standalone package.
+
+# Overview
+
+The `AnVILBase` package defines S4 generics for the AnVIL package. These
+include methods for copying, listing, removing, and backing up files in the
+cloud. All generics in the package have methods defined for 'missing' and 'ANY'
+signatures.
+
+# Cloud Platforms
+
+The `AnVILBase` package is designed to support packages that work with the AnVIL
+cloud platforms. Downstream packages expose Google Cloud Platform (AnVILGCP) and
+the Azure Cloud Platform (AnVILAz) application programming interfaces (APIs).
+To increase usability, the `AnVILBase` package attempts to deduce the user's
+cloud platform from environment variables. This is codified in the
+`cloud_platform` function:
+
+```{r,eval=FALSE}
+cloud_platform()
+```
+
+# Base generics
+
+The following generics are defined in the `AnVILBase` package:
+
+- `avcopy()`: Copy a file to and from the cloud
+- `avlist()`: List files in the cloud storage location
+- `avremove()`: Remove a file from the cloud
+- `avbackup()`: Backup files to the cloud
+- `avrestore()`: Restore files from the cloud
+- `avstorage()`: Get the storage address in the cloud
+
+# Table generics
+
+The following generics are defined in the `AnVILBase` package for tables:
+
+- `avtable` : Get a table by name from a workspace
+- `avtables` : List tables in the workspace(s)
+- `avtable_import`: Upload a table to a workspace
+- `avtable_import_set`: Create a set (grouped) table from an existing table
+- `avtable_delete`: Remove a table from a workspace
+- `avtable_delete_values`: Delete values from a table
+
+# Workspace generics
+
+The following generics are defined in the `AnVILBase` package for workspaces:
+
+- `avworkspace`: Set the active workspace
+- `avworkspaces`: List current workspace(s) on AnVIL
+- `avworkspace_name`: Get the workspace name
+- `avworkspace_namespace`: Get the workspace namespace
+
+Note that the `AnVILBase` package also includes helper functions that are
+used across `AnVIL` cloud platforms. These include functions mainly for working
+with the `AnVIL` API responses.
+
+# sessionInfo
+
+```{r}
+sessionInfo()
+```
+
