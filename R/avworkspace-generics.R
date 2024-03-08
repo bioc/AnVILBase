@@ -14,16 +14,16 @@
 #'
 #' @export
 setGeneric(
-    "avworkspaces",
-    function(..., platform) standardGeneric("avworkspaces"),
+    "avworkspace",
+    function(..., platform) standardGeneric("avworkspace"),
     signature = "platform"
 )
 
 #' @rdname avworkspace-generics
 #' @export
 setGeneric(
-    "avworkspace_namespace",
-    function(..., platform) standardGeneric("avworkspace_namespace"),
+    "avworkspaces",
+    function(..., platform) standardGeneric("avworkspaces"),
     signature = "platform"
 )
 
@@ -38,7 +38,15 @@ setGeneric(
 #' @rdname avworkspace-generics
 #' @export
 setGeneric(
-    "avworkspace",
-    function(..., platform) standardGeneric("avworkspace"),
+    "avworkspace_namespace",
+    function(..., platform) standardGeneric("avworkspace_namespace"),
+    signature = "platform"
+)
+
+#' @rdname avworkspace-generics
+#' @export
+setGeneric(
+    "avworkspace_clone",
+    function(..., platform) standardGeneric("avworkspace_clone"),
     signature = "platform"
 )

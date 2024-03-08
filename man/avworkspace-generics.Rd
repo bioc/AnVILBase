@@ -6,15 +6,18 @@
 \alias{avworkspace_namespace}
 \alias{avworkspace_name}
 \alias{avworkspace}
+\alias{avworkspace_clone}
 \title{All the table type generics for AnVIL}
 \usage{
-avworkspaces(..., platform)
+avworkspace(..., platform)
 
-avworkspace_namespace(..., platform)
+avworkspaces(..., platform)
 
 avworkspace_name(..., platform)
 
-avworkspace(..., platform)
+avworkspace_namespace(..., platform)
+
+avworkspace_clone(..., platform)
 }
 \arguments{
 \item{...}{Arguments passed to the methods.}
