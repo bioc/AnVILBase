@@ -2,31 +2,37 @@
 % Please edit documentation in R/avworkspace-methods.R
 \name{avworkspace-methods}
 \alias{avworkspace-methods}
-\alias{avworkspaces,missing-method}
-\alias{avworkspaces,ANY-method}
-\alias{avworkspace_namespace,missing-method}
-\alias{avworkspace_namespace,ANY-method}
-\alias{avworkspace_name,missing-method}
-\alias{avworkspace_name,ANY-method}
 \alias{avworkspace,missing-method}
 \alias{avworkspace,ANY-method}
+\alias{avworkspaces,missing-method}
+\alias{avworkspaces,ANY-method}
+\alias{avworkspace_name,missing-method}
+\alias{avworkspace_name,ANY-method}
+\alias{avworkspace_namespace,missing-method}
+\alias{avworkspace_namespace,ANY-method}
+\alias{avworkspace_clone,missing-method}
+\alias{avworkspace_clone,ANY-method}
 \title{The \code{avworkspace} methods for 'missing' and 'ANY' signatures}
 \usage{
+\S4method{avworkspace}{missing}(..., platform)
+
+\S4method{avworkspace}{ANY}(..., platform)
+
 \S4method{avworkspaces}{missing}(..., platform)
 
 \S4method{avworkspaces}{ANY}(..., platform)
-
-\S4method{avworkspace_namespace}{missing}(..., platform)
-
-\S4method{avworkspace_namespace}{ANY}(..., platform)
 
 \S4method{avworkspace_name}{missing}(..., platform)
 
 \S4method{avworkspace_name}{ANY}(..., platform)
 
-\S4method{avworkspace}{missing}(..., platform)
+\S4method{avworkspace_namespace}{missing}(..., platform)
 
-\S4method{avworkspace}{ANY}(..., platform)
+\S4method{avworkspace_namespace}{ANY}(..., platform)
+
+\S4method{avworkspace_clone}{missing}(..., platform)
+
+\S4method{avworkspace_clone}{ANY}(..., platform)
 }
 \description{
 The \code{AnVILBase} package defines S4 methods for the AnVIL
@@ -34,20 +40,24 @@ package. These methods are defined for the 'missing' and 'ANY' signatures.
 }
 \section{Functions}{
 \itemize{
+\item \code{avworkspace(missing)}: Get the current workspace namespace/name
+
+\item \code{avworkspace(ANY)}: Get the current workspace namespace/name
+
 \item \code{avworkspaces(missing)}: List workspaces
 
 \item \code{avworkspaces(ANY)}: List workspaces
-
-\item \code{avworkspace_namespace(missing)}: Get the namespace of the current workspace
-
-\item \code{avworkspace_namespace(ANY)}: Get the namespace of the current workspace
 
 \item \code{avworkspace_name(missing)}: Get the name of the current workspace
 
 \item \code{avworkspace_name(ANY)}: Get the name of the current workspace
 
-\item \code{avworkspace(missing)}: Get the current workspace namespace/name
+\item \code{avworkspace_namespace(missing)}: Get the namespace of the current workspace
 
-\item \code{avworkspace(ANY)}: Get the current workspace namespace/name
+\item \code{avworkspace_namespace(ANY)}: Get the namespace of the current workspace
+
+\item \code{avworkspace_clone(missing)}: Clone the current workspace
+
+\item \code{avworkspace_clone(ANY)}: Clone the current workspace
 
 }}
