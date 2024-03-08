@@ -16,7 +16,14 @@ environment variables or options within the workspace. This function is
 useful for methods dispatch.
 }
 \details{
-When \code{GOOGLE_PROJECT} is set, the function returns an object of class
-\code{gcp}. When \code{WORKSPACE_ID} is set, the function returns an object of
-class \code{azure}. Otherwise, the function returns an error.
+When \code{GOOGLE_PROJECT} is set, the function returns an object of
+class \code{gcp}. When \code{WORKSPACE_ID} is set, the function returns an object of
+class \code{azure}. Otherwise, the function returns an error. The user may also
+add options to set a default cloud platform. For AnVIL instances running on
+Google Cloud, the user can set
+\code{options(GCLOUD_SDK_PATH = "/home/user/google-cloud-sdk")}
+to set the default cloud platform to \code{gcp}. For AnVIL instances running on
+Azure, the user can set \code{options(AnVILAz.workspace_id = "myworkspace")}
+to set the default cloud platform to \code{azure}. Note that the values provided
+are example values and should be replaced with verifiable values.
 }

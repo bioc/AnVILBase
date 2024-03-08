@@ -14,7 +14,7 @@
     if (nzchar(opt))
         return("AnVILAz")
 
-    stop("The runtime environment must be within an AnVIL workspace.")
+    default
 }
 
 #' @title Cloud Platform Identifier
@@ -23,10 +23,16 @@
 #'   environment variables or options within the workspace. This function is
 #'   useful for methods dispatch.
 #'
-#' @details
-#' When `GOOGLE_PROJECT` is set, the function returns an object of class
-#'  `gcp`. When `WORKSPACE_ID` is set, the function returns an object of
-#'  class `azure`. Otherwise, the function returns an error.
+#' @details When `GOOGLE_PROJECT` is set, the function returns an object of
+#'   class `gcp`. When `WORKSPACE_ID` is set, the function returns an object of
+#'   class `azure`. Otherwise, the function returns an error. The user may also
+#'   add options to set a default cloud platform. For AnVIL instances running on
+#'   Google Cloud, the user can set
+#'   `options(GCLOUD_SDK_PATH = "/home/user/google-cloud-sdk")`
+#'   to set the default cloud platform to `gcp`. For AnVIL instances running on
+#'   Azure, the user can set `options(AnVILAz.workspace_id = "myworkspace")`
+#'   to set the default cloud platform to `azure`. Note that the values provided
+#'   are example values and should be replaced with verifiable values.
 #'
 #' @return An instance of class `gcp` or `azure` depending on the environment
 #'   variables or options set within the Terra workspace.
@@ -39,13 +45,26 @@ cloud_platform <- function() {
             if (requireNamespace("AnVILGCP", quietly = TRUE))
                 AnVILGCP::gcp()
             else
-                stop("The AnVILGCP package is not installed.")
+                stop("Install the 'AnVILGCP' package to use GCP on AnVIL.")
         },
         AnVILAz = {
             if (requireNamespace("AnVILAz", quietly = TRUE))
                 AnVILAz::azure()
             else
-                stop("The AnVILAz package is not installed.")
+                stop("Install the 'AnVILAz' package to use Azure on AnVIL.")
+        },
+        {
+            errmsg <- paste(
+                strwrap(
+                    "The runtime environment must be within an AnVIL
+                    workspace. To diagnose, check the workspace environment
+                    variables and ensure that you have an associated
+                    'GOOGLE_PROJECT' or 'WORKSPACE_ID' environment variable
+                    for Google Cloud and Azure workspaces, respectively."
+                , exdent = 2L),
+                collapse = "\n"
+            )
+            stop(errmsg)
         }
     )
 }
