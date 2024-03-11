@@ -5,7 +5,13 @@
     getOption(option, opt)
 }
 
-.get_platform <- function(default = "") {
+#' @name cloud_platform
+#'
+#' @param default `character(1)`. The default cloud platform to use if no
+#'  environment variables or options are set. The default is `""`.
+#'
+#' @export
+get_platform <- function(default = "") {
     opt <- .get_env_opt("GOOGLE_PROJECT", "GCLOUD_SDK_PATH", default)
     if (nzchar(opt))
         return("AnVILGCP")
@@ -19,9 +25,14 @@
 
 #' @title Cloud Platform Identifier
 #'
-#' @description This function calls the appropriate class constructor based on
-#'   environment variables or options within the workspace. This function is
-#'   useful for methods dispatch.
+#' @description `cloud_platform` calls the appropriate class constructor based
+#'   on environment variables or options within the workspace. This function is
+#'   used to determine the cloud platform to dispatch on for AnVIL methods. It
+#'   returns an error when neither the Azure or Google Cloud environment
+#'   variables are set. The `get_platform` function is a lower level helper to
+#'   identify the platform based on environment variables or options. Generally,
+#'   these functions are \emph{not} meant to be used directly.
+#'
 #'
 #' @details When `GOOGLE_PROJECT` is set, the function returns an object of
 #'   class `gcp`. When `WORKSPACE_ID` is set, the function returns an object of
@@ -34,13 +45,19 @@
 #'   to set the default cloud platform to `azure`. Note that the values provided
 #'   are example values and should be replaced with verifiable values.
 #'
-#' @return An instance of class `gcp` or `azure` depending on the environment
-#'   variables or options set within the Terra workspace.
+#' @return For `cloud_platform`: An instance of class `gcp` or `azure` based
+#'   on environment variables or options set within the AnVIL workspace.
+#'   For `get_platform`: A character string indicating the cloud platform.
 #'
+#' @examples
+#' get_platform()
+#' if (interactive()) {
+#'     cloud_platform()
+#' }
 #' @export
 cloud_platform <- function() {
     switch(
-        .get_platform(),
+        get_platform(),
         AnVILGCP = {
             if (requireNamespace("AnVILGCP", quietly = TRUE))
                 AnVILGCP::gcp()

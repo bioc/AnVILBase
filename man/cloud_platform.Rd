@@ -2,18 +2,30 @@
 % Please edit documentation in R/cloud_platform.R
 \name{cloud_platform}
 \alias{cloud_platform}
+\alias{get_platform}
 \title{Cloud Platform Identifier}
 \usage{
+get_platform(default = "")
+
 cloud_platform()
 }
+\arguments{
+\item{default}{\code{character(1)}. The default cloud platform to use if no
+environment variables or options are set. The default is \code{""}.}
+}
 \value{
-An instance of class \code{gcp} or \code{azure} depending on the environment
-variables or options set within the Terra workspace.
+For \code{cloud_platform}: An instance of class \code{gcp} or \code{azure} based
+on environment variables or options set within the AnVIL workspace.
+For \code{get_platform}: A character string indicating the cloud platform.
 }
 \description{
-This function calls the appropriate class constructor based on
-environment variables or options within the workspace. This function is
-useful for methods dispatch.
+\code{cloud_platform} calls the appropriate class constructor based
+on environment variables or options within the workspace. This function is
+used to determine the cloud platform to dispatch on for AnVIL methods. It
+returns an error when neither the Azure or Google Cloud environment
+variables are set. The \code{get_platform} function is a lower level helper to
+identify the platform based on environment variables or options. Generally,
+these functions are \emph{not} meant to be used directly.
 }
 \details{
 When \code{GOOGLE_PROJECT} is set, the function returns an object of
@@ -26,4 +38,10 @@ to set the default cloud platform to \code{gcp}. For AnVIL instances running on
 Azure, the user can set \code{options(AnVILAz.workspace_id = "myworkspace")}
 to set the default cloud platform to \code{azure}. Note that the values provided
 are example values and should be replaced with verifiable values.
+}
+\examples{
+get_platform()
+if (interactive()) {
+    cloud_platform()
+}
 }
