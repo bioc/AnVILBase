@@ -41,6 +41,8 @@ Collate:
     'AnVILBase-package.R'
     'Platform-class.R'
     'Response.R'
+    'avdata-generics.R'
+    'avdata-methods.R'
     'avtable-methods.R'
     'avworkspace-methods.R'
     'cloud_platform.R'
