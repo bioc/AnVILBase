@@ -2,10 +2,11 @@
 % Please edit documentation in R/avtable-generics.R
 \name{avtable-generics}
 \alias{avtable-generics}
-\alias{avtable_import}
-\alias{avtable_delete_values}
+\alias{avtable}
 \alias{avtables}
+\alias{avtable_import}
 \alias{avtable_import_set}
+\alias{avtable_delete_values}
 \alias{avtable_delete}
 \title{All the table type generics for AnVIL}
 \usage{
@@ -30,5 +31,5 @@ avtable_delete_values(..., platform)
 These are the generics to be used by the AnVIL package.
 }
 \seealso{
-\link{AnVILBase-generics}, \link{avworkspace-generics}
+\link{AnVILBase-generics}, \link{avworkspace-generics}, \link{avdata-generics}
 }

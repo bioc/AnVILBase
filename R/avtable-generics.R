@@ -1,6 +1,7 @@
 #' @name avtable-generics
 #'
-#' @aliases avtable_import avtable_delete_values
+#' @aliases avtable avtables avtable_import avtable_import_set
+#'   avtable_delete_values
 #'
 #' @title All the table type generics for AnVIL
 #'
@@ -10,14 +11,21 @@
 #'
 #' @param ... Arguments passed to the methods.
 #'
-#' @seealso [AnVILBase-generics], [avworkspace-generics]
+#' @seealso [AnVILBase-generics], [avworkspace-generics], [avdata-generics]
 #'
+NULL
+
+# avtable -----------------------------------------------------------------
+
+#' @rdname avtable-generics
 #' @export
 setGeneric(
     "avtable",
     function(..., platform) standardGeneric("avtable"),
     signature = "platform"
 )
+
+# avtables ----------------------------------------------------------------
 
 #' @rdname avtable-generics
 #' @export
@@ -27,6 +35,8 @@ setGeneric(
     signature = "platform"
 )
 
+# avtable_import ----------------------------------------------------------
+
 #' @rdname avtable-generics
 #' @export
 setGeneric(
@@ -34,7 +44,6 @@ setGeneric(
     function(..., platform) standardGeneric("avtable_import"),
     signature = "platform"
 )
-
 #' @rdname avtable-generics
 #' @export
 setGeneric(
@@ -42,6 +51,8 @@ setGeneric(
     function(..., platform) standardGeneric("avtable_import_set"),
     signature = "platform"
 )
+
+# avtable_import_set ------------------------------------------------------
 
 #' @rdname avtable-generics
 #' @export
@@ -51,6 +62,8 @@ setGeneric(
     signature = "platform"
 )
 
+# avtable_delete_values ---------------------------------------------------
+
 #' @rdname avtable-generics
 #' @export
 setGeneric(
@@ -58,4 +71,3 @@ setGeneric(
     function(..., platform) standardGeneric("avtable_delete_values"),
     signature = "platform"
 )
-
