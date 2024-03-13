@@ -89,6 +89,14 @@ Note that the `AnVILBase` package also includes helper functions that are
 used across `AnVIL` cloud platforms. These include functions mainly for working
 with the `AnVIL` API responses.
 
+# Reference data generics
+
+The following generics are defined in the `AnVILBase` package for reference
+data:
+
+- `avdata`: Get reference data from workspace attributes
+- `avdata_import`: Upload data to the workspace attributes
+
 # sessionInfo
 
 ```{r}
