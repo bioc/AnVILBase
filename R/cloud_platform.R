@@ -11,7 +11,7 @@
 #'  environment variables or options are set. The default is `""`.
 #'
 #' @export
-get_platform <- function(default = "") {
+avplatform_namespace <- function(default = "") {
     opt <- .get_env_opt("GOOGLE_PROJECT", "GCLOUD_SDK_PATH", default)
     if (nzchar(opt))
         return("AnVILGCP")
@@ -29,7 +29,7 @@ get_platform <- function(default = "") {
 #'   on environment variables or options within the workspace. This function is
 #'   used to determine the cloud platform to dispatch on for AnVIL methods. It
 #'   returns an error when neither the Azure or Google Cloud environment
-#'   variables are set. The `get_platform` function is a lower level helper to
+#'   variables are set. The `avplatform_namespace` function is a lower level helper to
 #'   identify the platform based on environment variables or options. Generally,
 #'   these functions are \emph{not} meant to be used directly.
 #'
@@ -47,17 +47,17 @@ get_platform <- function(default = "") {
 #'
 #' @return For `cloud_platform`: An instance of class `gcp` or `azure` based
 #'   on environment variables or options set within the AnVIL workspace.
-#'   For `get_platform`: A character string indicating the cloud platform.
+#'   For `avplatform_namespace`: A character string indicating the cloud platform.
 #'
 #' @examples
-#' get_platform()
+#' avplatform_namespace()
 #' if (interactive()) {
 #'     cloud_platform()
 #' }
 #' @export
 cloud_platform <- function() {
     switch(
-        get_platform(),
+        avplatform_namespace(),
         AnVILGCP = {
             if (requireNamespace("AnVILGCP", quietly = TRUE))
                 AnVILGCP::gcp()

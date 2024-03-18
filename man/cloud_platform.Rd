@@ -2,10 +2,10 @@
 % Please edit documentation in R/cloud_platform.R
 \name{cloud_platform}
 \alias{cloud_platform}
-\alias{get_platform}
+\alias{avplatform_namespace}
 \title{Cloud Platform Identifier}
 \usage{
-get_platform(default = "")
+avplatform_namespace(default = "")
 
 cloud_platform()
 }
@@ -16,14 +16,14 @@ environment variables or options are set. The default is \code{""}.}
 \value{
 For \code{cloud_platform}: An instance of class \code{gcp} or \code{azure} based
 on environment variables or options set within the AnVIL workspace.
-For \code{get_platform}: A character string indicating the cloud platform.
+For \code{avplatform_namespace}: A character string indicating the cloud platform.
 }
 \description{
 \code{cloud_platform} calls the appropriate class constructor based
 on environment variables or options within the workspace. This function is
 used to determine the cloud platform to dispatch on for AnVIL methods. It
 returns an error when neither the Azure or Google Cloud environment
-variables are set. The \code{get_platform} function is a lower level helper to
+variables are set. The \code{avplatform_namespace} function is a lower level helper to
 identify the platform based on environment variables or options. Generally,
 these functions are \emph{not} meant to be used directly.
 }
@@ -40,7 +40,7 @@ to set the default cloud platform to \code{azure}. Note that the values provided
 are example values and should be replaced with verifiable values.
 }
 \examples{
-get_platform()
+avplatform_namespace()
 if (interactive()) {
     cloud_platform()
 }
