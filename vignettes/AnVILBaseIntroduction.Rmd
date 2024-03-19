@@ -76,6 +76,13 @@ The following generics are defined in the `AnVILBase` package for tables:
 - `avtable_delete`: Remove a table from a workspace
 - `avtable_delete_values`: Delete values from a table
 
+# Data generics
+
+The following generics are defined in the `AnVILBase` package for data:
+
+- `avdata`: Get "reference" and "other" data from a workspace
+- `avdata_import`: Upload data to a workspace's attributes
+
 # Workspace generics
 
 The following generics are defined in the `AnVILBase` package for workspaces:
@@ -88,6 +95,12 @@ The following generics are defined in the `AnVILBase` package for workspaces:
 Note that the `AnVILBase` package also includes helper functions that are
 used across `AnVIL` cloud platforms. These include functions mainly for working
 with the `AnVIL` API responses.
+
+# Workflow generics
+
+The following generics are defined in the `AnVILBase` package for workflows:
+
+- `avworkflow_jobs`: Get the execution status of a workflow
 
 # Reference data generics
 
