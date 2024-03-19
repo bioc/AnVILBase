@@ -40,6 +40,12 @@
 
 \S4method{avtable_delete_values}{ANY}(..., platform)
 }
+\arguments{
+\item{...}{Arguments passed to the methods.}
+
+\item{platform}{A Platform derived class indicating the AnVIL environment,
+currently, \code{azure} and \code{gcp} classes are compatible.}
+}
 \description{
 The \code{AnVILBase} package defines S4 methods for the AnVIL
 package. These methods are defined for the 'missing' and 'ANY' signatures.

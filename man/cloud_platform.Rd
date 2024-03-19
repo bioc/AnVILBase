@@ -14,18 +14,18 @@ cloud_platform()
 environment variables or options are set. The default is \code{""}.}
 }
 \value{
-For \code{cloud_platform}: An instance of class \code{gcp} or \code{azure} based
-on environment variables or options set within the AnVIL workspace.
-For \code{avplatform_namespace}: A character string indicating the cloud platform.
+For \code{cloud_platform}: An instance of class \code{gcp} or \code{azure} based on
+environment variables or options set within the AnVIL workspace. For
+\code{avplatform_namespace}: A character string indicating the cloud platform.
 }
 \description{
 \code{cloud_platform} calls the appropriate class constructor based
 on environment variables or options within the workspace. This function is
 used to determine the cloud platform to dispatch on for AnVIL methods. It
 returns an error when neither the Azure or Google Cloud environment
-variables are set. The \code{avplatform_namespace} function is a lower level helper to
-identify the platform based on environment variables or options. Generally,
-these functions are \emph{not} meant to be used directly.
+variables are set. The \code{avplatform_namespace} function is a lower level
+helper to identify the platform based on environment variables or options.
+Generally, these functions are \emph{not} meant to be used directly.
 }
 \details{
 When \code{GOOGLE_PROJECT} is set, the function returns an object of

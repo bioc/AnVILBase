@@ -29,9 +29,9 @@ avplatform_namespace <- function(default = "") {
 #'   on environment variables or options within the workspace. This function is
 #'   used to determine the cloud platform to dispatch on for AnVIL methods. It
 #'   returns an error when neither the Azure or Google Cloud environment
-#'   variables are set. The `avplatform_namespace` function is a lower level helper to
-#'   identify the platform based on environment variables or options. Generally,
-#'   these functions are \emph{not} meant to be used directly.
+#'   variables are set. The `avplatform_namespace` function is a lower level
+#'   helper to identify the platform based on environment variables or options.
+#'   Generally, these functions are \emph{not} meant to be used directly.
 #'
 #'
 #' @details When `GOOGLE_PROJECT` is set, the function returns an object of
@@ -45,9 +45,9 @@ avplatform_namespace <- function(default = "") {
 #'   to set the default cloud platform to `azure`. Note that the values provided
 #'   are example values and should be replaced with verifiable values.
 #'
-#' @return For `cloud_platform`: An instance of class `gcp` or `azure` based
-#'   on environment variables or options set within the AnVIL workspace.
-#'   For `avplatform_namespace`: A character string indicating the cloud platform.
+#' @return For `cloud_platform`: An instance of class `gcp` or `azure` based on
+#'   environment variables or options set within the AnVIL workspace. For
+#'   `avplatform_namespace`: A character string indicating the cloud platform.
 #'
 #' @examples
 #' avplatform_namespace()

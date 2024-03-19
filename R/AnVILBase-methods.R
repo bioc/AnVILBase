@@ -5,12 +5,9 @@
 #' @description The `AnVILBase` package defines S4 methods for the AnVIL
 #'  package. These methods are defined for the 'missing' and 'ANY' signatures.
 #'
-#' @param ... Arguments passed to the method
+#' @inheritParams AnVILBase-generics
 #'
-#' @param platform An object derived from the Platform class.
-#'
-#' @include avtable-generics.R
-#' @include avworkspace-generics.R
+#' @include AnVILBase-generics.R
 #'
 NULL
 

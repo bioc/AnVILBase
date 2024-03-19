@@ -6,11 +6,10 @@
 #'
 #' @description These are the generics to be used by the AnVIL package.
 #'
-#' @param platform A Platform derived object.
+#' @inheritParams AnVILBase-generics
 #'
-#' @param ... Arguments passed to the methods.
-#'
-#' @seealso [AnVILBase-generics], [avtable-generics]
+#' @seealso [AnVILBase-generics], [avtable-generics], [avdata-generics],
+#'   [avworkflow-generics]
 #'
 #' @export
 setGeneric(

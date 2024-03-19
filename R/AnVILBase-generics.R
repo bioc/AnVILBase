@@ -6,9 +6,13 @@
 #'
 #' @description These are the generics to be used by the AnVIL package.
 #'
-#' @param platform A Platform derived object.
+#' @param platform A Platform derived class indicating the AnVIL environment,
+#'   currently, `azure` and `gcp` classes are compatible.
 #'
 #' @param ... Arguments passed to the methods.
+#'
+#' @seealso [avworkspace-generics], [avtable-generics], [avdata-generics],
+#'   [avworkflow-generics]
 #'
 #' @export
 setGeneric(

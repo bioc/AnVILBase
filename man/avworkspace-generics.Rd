@@ -22,11 +22,13 @@ avworkspace_clone(..., platform)
 \arguments{
 \item{...}{Arguments passed to the methods.}
 
-\item{platform}{A Platform derived object.}
+\item{platform}{A Platform derived class indicating the AnVIL environment,
+currently, \code{azure} and \code{gcp} classes are compatible.}
 }
 \description{
 These are the generics to be used by the AnVIL package.
 }
 \seealso{
-\link{AnVILBase-generics}, \link{avtable-generics}
+\link{AnVILBase-generics}, \link{avtable-generics}, \link{avdata-generics},
+\link{avworkflow-generics}
 }

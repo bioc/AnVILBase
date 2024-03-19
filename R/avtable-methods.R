@@ -5,6 +5,10 @@
 #' @description The `AnVILBase` package defines S4 methods for the AnVIL
 #'  package. These methods are defined for the 'missing' and 'ANY' signatures.
 #'
+#' @inheritParams avtable-generics
+#'
+#' @include avtable-generics.R
+#'
 NULL
 
 #' @describeIn avtable-methods Show the contents of a particular table (entity

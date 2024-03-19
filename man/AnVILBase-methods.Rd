@@ -41,9 +41,10 @@
 \S4method{avstorage}{ANY}(..., platform)
 }
 \arguments{
-\item{...}{Arguments passed to the method}
+\item{...}{Arguments passed to the methods.}
 
-\item{platform}{An object derived from the Platform class.}
+\item{platform}{A Platform derived class indicating the AnVIL environment,
+currently, \code{azure} and \code{gcp} classes are compatible.}
 }
 \description{
 The \code{AnVILBase} package defines S4 methods for the AnVIL

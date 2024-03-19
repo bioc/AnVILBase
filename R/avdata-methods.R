@@ -5,6 +5,10 @@
 #' @description The `AnVILBase` package defines S4 methods for the AnVIL
 #'  package. These methods are defined for the 'missing' and 'ANY' signatures.
 #'
+#' @inheritParams avdata-generics
+#'
+#' @include avdata-generics.R
+#'
 NULL
 
 #' @describeIn avdata-methods Get reference data from workspace attributes
