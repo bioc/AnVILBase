@@ -41,6 +41,8 @@ Collate:
     'Response.R'
     'avdata-generics.R'
     'avdata-methods.R'
+    'avnotebooks-generics.R'
+    'avnotebooks-methods.R'
     'avtable-generics.R'
     'avtable-methods.R'
     'avworkflow-generics.R'
