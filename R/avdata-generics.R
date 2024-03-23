@@ -11,6 +11,12 @@
 #' @seealso [AnVILBase-generics], [avworkspace-generics], [avtable-generics],
 #'   [avworkflow-generics]
 #'
+#' @return called for the side effect of defining the generics
+#'
+#' @examples
+#' getGeneric("avdata")
+#'
+#'
 NULL
 
 # avdata ------------------------------------------------------------------

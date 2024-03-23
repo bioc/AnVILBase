@@ -9,6 +9,14 @@
 #'
 #' @include AnVILBase-generics.R
 #'
+#' @return Methods for the 'missing' and 'ANY' signatures provide a way to
+#'   redirect calls to the appropriate method for the current cloud platform.
+#'
+#' @examples
+#' findMethods("avcopy")
+#' getMethod("avcopy", c(platform = "missing"))
+#'
+#'
 NULL
 
 #' @describeIn AnVILBase-methods Copy a file from the cloud

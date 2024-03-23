@@ -33,3 +33,10 @@ less than 400.
 \item \code{avworkspaces_clean} - Clean workspace information
 }
 }
+\examples{
+if (interactive()) {
+    test <- httr::GET("http://google.com/")
+    avstop_for_status(test, "google")
+}
+
+}

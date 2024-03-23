@@ -11,6 +11,14 @@
 #' @seealso [AnVILBase-generics], [avtable-generics], [avdata-generics],
 #'   [avworkflow-generics]
 #'
+#' @return called for the side effect of registering generic functions
+#'
+#' @examples
+#' getGeneric("avworkspace")
+#'
+NULL
+
+#' @rdname avworkspace-generics
 #' @export
 setGeneric(
     "avworkspace",

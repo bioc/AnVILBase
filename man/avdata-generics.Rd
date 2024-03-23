@@ -16,8 +16,16 @@ avdata_import(..., platform)
 \item{platform}{A Platform derived class indicating the AnVIL environment,
 currently, \code{azure} and \code{gcp} classes are compatible.}
 }
+\value{
+called for the side effect of defining the generics
+}
 \description{
 These are the generics to be used by the AnVIL package.
+}
+\examples{
+getGeneric("avdata")
+
+
 }
 \seealso{
 \link{AnVILBase-generics}, \link{avworkspace-generics}, \link{avtable-generics},

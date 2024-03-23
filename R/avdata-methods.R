@@ -9,6 +9,13 @@
 #'
 #' @include avdata-generics.R
 #'
+#' @return Methods for the 'missing' and 'ANY' signatures provide a way to
+#'   redirect calls to the appropriate method for the current cloud platform.
+#'
+#' @examples
+#' findMethods("avdata")
+#' getMethod("avdata", c(platform = "missing"))
+#'
 NULL
 
 #' @describeIn avdata-methods Get reference data from workspace attributes

@@ -10,6 +10,9 @@
 #' @param default `character(1)`. The default cloud platform to use if no
 #'  environment variables or options are set. The default is `""`.
 #'
+#' @return For `avplatform_namespace`: A character string indicating the cloud
+#'   platform derived from environment variables.
+#'
 #' @export
 avplatform_namespace <- function(default = "") {
     opt <- .get_env_opt("GOOGLE_PROJECT", "GCLOUD_SDK_PATH", default)

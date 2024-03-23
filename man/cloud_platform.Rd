@@ -14,6 +14,9 @@ cloud_platform()
 environment variables or options are set. The default is \code{""}.}
 }
 \value{
+For \code{avplatform_namespace}: A character string indicating the cloud
+platform derived from environment variables.
+
 For \code{cloud_platform}: An instance of class \code{gcp} or \code{azure} based on
 environment variables or options set within the AnVIL workspace. For
 \code{avplatform_namespace}: A character string indicating the cloud platform.

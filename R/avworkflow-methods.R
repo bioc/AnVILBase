@@ -8,6 +8,13 @@
 #'
 #' @include avworkflow-generics.R
 #'
+#' @return Methods for the 'missing' and 'ANY' signatures provide a way to
+#'   redirect calls to the appropriate method for the current cloud platform.
+#'
+#' @examples
+#' findMethods("avworkflow_jobs")
+#' getMethod("avworkflow_jobs", c(platform = "missing"))
+#'
 NULL
 
 #' @describeIn avworkflow-methods Get the status of a workflow execution

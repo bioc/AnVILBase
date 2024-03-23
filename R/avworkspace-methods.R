@@ -5,6 +5,13 @@
 #' @description The `AnVILBase` package defines S4 methods for the AnVIL
 #'  package. These methods are defined for the 'missing' and 'ANY' signatures.
 #'
+#' @return Methods for the 'missing' and 'ANY' signatures provide a way to
+#'   redirect calls to the appropriate method for the current cloud platform.
+#'
+#' @examples
+#' findMethods("avworkspace")
+#' getMethod("avworkspace", c(platform = "missing"))
+#'
 NULL
 
 #' @describeIn avworkspace-methods Get the current workspace namespace/name
