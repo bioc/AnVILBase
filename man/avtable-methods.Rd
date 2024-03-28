@@ -46,6 +46,10 @@
 \item{platform}{A Platform derived class indicating the AnVIL environment,
 currently, \code{azure} and \code{gcp} classes are compatible.}
 }
+\value{
+Methods for the 'missing' and 'ANY' signatures provide a way to
+redirect calls to the appropriate method for the current cloud platform.
+}
 \description{
 The \code{AnVILBase} package defines S4 methods for the AnVIL
 package. These methods are defined for the 'missing' and 'ANY' signatures.
@@ -83,3 +87,8 @@ distinct value in the column identified by \code{set}.
 \item \code{avtable_delete_values(ANY)}: Delete a row in a table based on the key
 
 }}
+\examples{
+findMethods("avtable")
+getMethod("avtable", c(platform = "missing"))
+
+}

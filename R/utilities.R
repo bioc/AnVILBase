@@ -15,6 +15,12 @@
 #' @return `avstop_for_status` - `response` if status code less than 400
 #'   otherwise throw an error
 #'
+#' @examples
+#' if (interactive()) {
+#'     test <- httr::GET("http://google.com/")
+#'     avstop_for_status(test, "google")
+#' }
+#'
 #' @export
 avstop_for_status <-
     function(response, op)

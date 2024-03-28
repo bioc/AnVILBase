@@ -9,6 +9,13 @@
 #'
 #' @include avtable-generics.R
 #'
+#' @return Methods for the 'missing' and 'ANY' signatures provide a way to
+#'   redirect calls to the appropriate method for the current cloud platform.
+#'
+#' @examples
+#' findMethods("avtable")
+#' getMethod("avtable", c(platform = "missing"))
+#'
 NULL
 
 #' @describeIn avtable-methods Show the contents of a particular table (entity

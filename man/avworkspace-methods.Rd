@@ -34,6 +34,10 @@
 
 \S4method{avworkspace_clone}{ANY}(..., platform)
 }
+\value{
+Methods for the 'missing' and 'ANY' signatures provide a way to
+redirect calls to the appropriate method for the current cloud platform.
+}
 \description{
 The \code{AnVILBase} package defines S4 methods for the AnVIL
 package. These methods are defined for the 'missing' and 'ANY' signatures.
@@ -61,3 +65,8 @@ package. These methods are defined for the 'missing' and 'ANY' signatures.
 \item \code{avworkspace_clone(ANY)}: Clone the current workspace
 
 }}
+\examples{
+findMethods("avworkspace")
+getMethod("avworkspace", c(platform = "missing"))
+
+}

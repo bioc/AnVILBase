@@ -14,6 +14,11 @@
 #' @seealso [avworkspace-generics], [avtable-generics], [avdata-generics],
 #'   [avworkflow-generics]
 #'
+#' @return called for the side effect of registering generic functions
+#'
+#' @examples
+#' getGeneric("avcopy")
+#'
 #' @export
 setGeneric(
     "avcopy",

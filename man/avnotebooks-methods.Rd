@@ -28,6 +28,10 @@
 \item{platform}{A Platform derived class indicating the AnVIL environment,
 currently, \code{azure} and \code{gcp} classes are compatible.}
 }
+\value{
+Methods for the 'missing' and 'ANY' signatures provide a way to
+redirect calls to the appropriate method for the current cloud platform.
+}
 \description{
 These are the methods to be used by the AnVIL package.
 }
@@ -52,3 +56,8 @@ the workspace storage
 the workspace storage
 
 }}
+\examples{
+findMethods("avnotebooks")
+getMethod("avnotebooks", c(platform = "missing"))
+
+}

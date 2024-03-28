@@ -13,8 +13,15 @@ avworkflow_jobs(..., platform)
 \item{platform}{A Platform derived class indicating the AnVIL environment,
 currently, \code{azure} and \code{gcp} classes are compatible.}
 }
+\value{
+called for the side effect of registering generic functions
+}
 \description{
 These are the generics to be used by the AnVIL package.
+}
+\examples{
+getGeneric("avworkflow_jobs")
+
 }
 \seealso{
 \link{AnVILBase-generics}, \link{avworkspace-generics}, \link{avtable-generics},

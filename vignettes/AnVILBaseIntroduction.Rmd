@@ -54,6 +54,17 @@ cloud platform from environment variables. This is codified in the
 cloud_platform()
 ```
 
+### Developer Note
+
+Packages that use the `AnVILBase` package can conditionally run tests using the
+`avplatform_namespace()` function. It will return either `AnVILGCP` or `AnVILAz`
+depending on the cloud environment variables that are set. If no environment
+variables are set, the function will return `""`.
+
+```{r}
+avplatform_namespace()
+```
+
 # Base generics
 
 The following generics are defined in the `AnVILBase` package:
@@ -102,13 +113,13 @@ The following generics are defined in the `AnVILBase` package for workflows:
 
 - `avworkflow_jobs`: Get the execution status of a workflow
 
-# Reference data generics
+# Notebook generics
 
-The following generics are defined in the `AnVILBase` package for reference
-data:
+The following generics are defined in the `AnVILBase` package for notebooks:
 
-- `avdata`: Get reference data from workspace attributes
-- `avdata_import`: Upload data to the workspace attributes
+- `avnotebooks`: List notebooks in the workspace
+- `avnotebooks_localize`: Download notebooks from a cloud to a workspace
+- `avnotebooks_delocalize`: Upload notebooks from a workspace to a cloud
 
 # sessionInfo
 

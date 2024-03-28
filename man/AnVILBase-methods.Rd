@@ -46,6 +46,10 @@
 \item{platform}{A Platform derived class indicating the AnVIL environment,
 currently, \code{azure} and \code{gcp} classes are compatible.}
 }
+\value{
+Methods for the 'missing' and 'ANY' signatures provide a way to
+redirect calls to the appropriate method for the current cloud platform.
+}
 \description{
 The \code{AnVILBase} package defines S4 methods for the AnVIL
 package. These methods are defined for the 'missing' and 'ANY' signatures.
@@ -77,3 +81,9 @@ package. These methods are defined for the 'missing' and 'ANY' signatures.
 \item \code{avstorage(ANY)}: Get the storage location
 
 }}
+\examples{
+findMethods("avcopy")
+getMethod("avcopy", c(platform = "missing"))
+
+
+}

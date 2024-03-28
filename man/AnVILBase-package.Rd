@@ -9,6 +9,14 @@
 The \code{AnVILBase} package defines S4 generics for the AnVIL
 package.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/Bioconductor/AnVILBase}
+  \item Report bugs at \url{https://github.com/Bioconductor/AnVILBase/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Marcel Ramos \email{marcel.ramos@roswellpark.org} (\href{https://orcid.org/0000-0002-3242-0582}{ORCID})
 
