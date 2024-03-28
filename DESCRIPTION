@@ -39,8 +39,6 @@ Collate:
     'AnVILBase-package.R'
     'Platform-class.R'
     'Response.R'
-    'avdata-generics.R'
-    'avdata-methods.R'
     'avnotebooks-generics.R'
     'avnotebooks-methods.R'
     'avtable-generics.R'
