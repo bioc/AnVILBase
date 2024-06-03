@@ -34,6 +34,12 @@
 
 \S4method{avworkspace_clone}{ANY}(..., platform)
 }
+\arguments{
+\item{...}{Arguments passed to the methods.}
+
+\item{platform}{A Platform derived class indicating the AnVIL environment,
+currently, \code{azure} and \code{gcp} classes are compatible.}
+}
 \value{
 Methods for the 'missing' and 'ANY' signatures provide a way to
 redirect calls to the appropriate method for the current cloud platform.

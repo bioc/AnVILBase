@@ -8,6 +8,8 @@
 #' @return Methods for the 'missing' and 'ANY' signatures provide a way to
 #'   redirect calls to the appropriate method for the current cloud platform.
 #'
+#' @inheritParams AnVILBase-generics
+#'
 #' @examples
 #' findMethods("avworkspace")
 #' getMethod("avworkspace", c(platform = "missing"))
