@@ -11,8 +11,7 @@
 #'
 #' @param ... Arguments passed to the methods.
 #'
-#' @seealso [avworkspace-generics], [avtable-generics], [avdata-generics],
-#'   [avworkflow-generics]
+#' @seealso [avworkspace-generics], [avtable-generics], [avworkflow-generics]
 #'
 #' @return called for the side effect of registering generic functions
 #'

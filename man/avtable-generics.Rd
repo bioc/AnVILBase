@@ -39,6 +39,5 @@ getGeneric("avtable")
 
 }
 \seealso{
-\link{AnVILBase-generics}, \link{avworkspace-generics}, \link{avdata-generics},
-\link{avworkflow-generics}
+\link{AnVILBase-generics}, \link{avworkspace-generics}, \link{avworkflow-generics}
 }

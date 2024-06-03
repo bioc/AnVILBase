@@ -32,5 +32,5 @@ getGeneric("avnotebooks")
 }
 \seealso{
 \link{AnVILBase-generics}, \link{avworkspace-generics}, \link{avtable-generics},
-\link{avdata-generics}, \link{avworkflow-generics}
+\link{avworkflow-generics}
 }

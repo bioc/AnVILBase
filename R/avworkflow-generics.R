@@ -8,8 +8,7 @@
 #'
 #' @inheritParams AnVILBase-generics
 #'
-#' @seealso [AnVILBase-generics], [avworkspace-generics], [avtable-generics],
-#'   [avdata-generics]
+#' @seealso [AnVILBase-generics], [avworkspace-generics], [avtable-generics]
 #'
 #' @return called for the side effect of registering generic functions
 #'

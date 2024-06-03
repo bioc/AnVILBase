@@ -39,6 +39,5 @@ getGeneric("avcopy")
 
 }
 \seealso{
-\link{avworkspace-generics}, \link{avtable-generics}, \link{avdata-generics},
-\link{avworkflow-generics}
+\link{avworkspace-generics}, \link{avtable-generics}, \link{avworkflow-generics}
 }

@@ -24,6 +24,5 @@ getGeneric("avworkflow_jobs")
 
 }
 \seealso{
-\link{AnVILBase-generics}, \link{avworkspace-generics}, \link{avtable-generics},
-\link{avdata-generics}
+\link{AnVILBase-generics}, \link{avworkspace-generics}, \link{avtable-generics}
 }
