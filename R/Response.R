@@ -104,8 +104,8 @@ setMethod("flatten", "httr2_response",
     value <- fun(x, ...)
     if (nzchar(value)) {
         json <- fromJSON(value, flatten = TRUE)
-        as_tibble(json)
+        tibble::as_tibble(json)
     } else {
-        tibble()
+        tibble::tibble()
     }
 }
