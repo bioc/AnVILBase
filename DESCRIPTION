@@ -21,6 +21,7 @@ Imports:
   methods,
   tibble
 Suggests:
+  AnVIL,
   AnVILAz,
   AnVILGCP,
   BiocStyle,

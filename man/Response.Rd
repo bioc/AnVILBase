@@ -55,6 +55,7 @@ form
 }}
 \examples{
 if (AnVILGCP::gcloud_exists()) {
+    library(AnVIL)
     leonardo <- Leonardo()
     leonardo$listRuntimes() |> flatten()
 
