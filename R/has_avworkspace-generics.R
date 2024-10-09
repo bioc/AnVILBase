@@ -9,6 +9,9 @@
 #'
 #' @inheritParams AnVILBase-generics
 #'
+#' @param strict `logical(1)` Whether to include a check for an existing
+#'   `avworkspace_name()` setting.
+#'
 #' @seealso [AnVILBase-generics], [avworkspace-generics], [avtable-generics]
 #'
 #' @return called for the side effect testing the workspace environment

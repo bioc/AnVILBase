@@ -8,6 +8,9 @@
 has_avworkspace(strict, ..., platform)
 }
 \arguments{
+\item{strict}{\code{logical(1)} Whether to include a check for an existing
+\code{avworkspace_name()} setting.}
+
 \item{...}{Arguments passed to the methods.}
 
 \item{platform}{A Platform derived class indicating the AnVIL environment,
