@@ -5,7 +5,7 @@
 \alias{has_avworkspace}
 \title{The generic for checking if the user is within an environment}
 \usage{
-has_avworkspace(..., platform)
+has_avworkspace(strict, ..., platform)
 }
 \arguments{
 \item{...}{Arguments passed to the methods.}

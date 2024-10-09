@@ -6,9 +6,9 @@
 \alias{has_avworkspace,ANY-method}
 \title{The \code{has_avworkspace} methods for \code{missing} and \code{ANY} signatures.}
 \usage{
-\S4method{has_avworkspace}{missing}(..., platform)
+\S4method{has_avworkspace}{missing}(strict, ..., platform)
 
-\S4method{has_avworkspace}{ANY}(..., platform)
+\S4method{has_avworkspace}{ANY}(strict, ..., platform)
 }
 \arguments{
 \item{...}{Arguments passed to the methods.}

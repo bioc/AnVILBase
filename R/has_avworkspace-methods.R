@@ -22,7 +22,7 @@ NULL
 #' @exportMethod has_avworkspace
 setMethod("has_avworkspace", c(platform = "missing"),
     function(strict, ..., platform) {
-        has_avworkspace(..., platform = cloud_platform())
+        has_avworkspace(strict, ..., platform = cloud_platform())
     }
 )
 
