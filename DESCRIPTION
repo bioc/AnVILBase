@@ -53,4 +53,6 @@ Collate:
     'avworkspace-generics.R'
     'avworkspace-methods.R'
     'cloud_platform.R'
+    'has_avworkspace-generics.R'
+    'has_avworkspace-methods.R'
     'utilities.R'
