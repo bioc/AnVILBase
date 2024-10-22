@@ -5,11 +5,11 @@
 \alias{has_avworkspace}
 \title{The generic for checking if the user is within an environment}
 \usage{
-has_avworkspace(strict, ..., platform)
+has_avworkspace(strict = FALSE, ..., platform)
 }
 \arguments{
 \item{strict}{\code{logical(1)} Whether to include a check for an existing
-\code{avworkspace_name()} setting.}
+\code{avworkspace_name()} setting. Default \code{FALSE}.}
 
 \item{...}{Arguments passed to the methods.}
 

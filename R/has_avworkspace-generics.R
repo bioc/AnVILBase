@@ -10,7 +10,7 @@
 #' @inheritParams AnVILBase-generics
 #'
 #' @param strict `logical(1)` Whether to include a check for an existing
-#'   `avworkspace_name()` setting.
+#'   `avworkspace_name()` setting. Default `FALSE`.
 #'
 #' @seealso [AnVILBase-generics], [avworkspace-generics], [avtable-generics]
 #'
@@ -27,7 +27,7 @@ NULL
 #' @export
 setGeneric(
     "has_avworkspace",
-    function(strict, ..., platform) standardGeneric("has_avworkspace"),
+    function(strict = FALSE, ..., platform) standardGeneric("has_avworkspace"),
     signature = "platform"
 )
 

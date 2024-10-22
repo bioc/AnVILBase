@@ -6,13 +6,13 @@
 \alias{has_avworkspace,ANY-method}
 \title{The \code{has_avworkspace} methods for \code{missing} and \code{ANY} signatures.}
 \usage{
-\S4method{has_avworkspace}{missing}(strict, ..., platform)
+\S4method{has_avworkspace}{missing}(strict = FALSE, ..., platform)
 
-\S4method{has_avworkspace}{ANY}(strict, ..., platform)
+\S4method{has_avworkspace}{ANY}(strict = FALSE, ..., platform)
 }
 \arguments{
 \item{strict}{\code{logical(1)} Whether to include a check for an existing
-\code{avworkspace_name()} setting.}
+\code{avworkspace_name()} setting. Default \code{FALSE}.}
 
 \item{...}{Arguments passed to the methods.}
 
