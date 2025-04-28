@@ -13,6 +13,7 @@ Description: Provides generic functions for interacting with the AnVIL
   of AnVILBase. Extension packages will provide methods for interacting with
   other cloud providers.
 License: Artistic-2.0
+Depends: R (>= 4.5.0)
 Imports:
   httr,
   httr2,
