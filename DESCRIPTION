@@ -26,6 +26,7 @@ Suggests:
   AnVILAz,
   AnVILGCP,
   BiocStyle,
+  GCPtools,
   knitr,
   rmarkdown,
   testthat (>= 3.0.0),
